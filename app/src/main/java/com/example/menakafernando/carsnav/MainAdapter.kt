@@ -24,6 +24,9 @@ class MainAdapter(val jFeed: JFeed): RecyclerView.Adapter<CustomViewHolder>() {
     override fun onBindViewHolder(p0: CustomViewHolder, p1: Int) {
         val row = jFeed.placemarks[p1]
         p0?.view?.textView_carTitle.text = row.name
+        p0?.view.textView_vin.text = row.vin
+        p0?.view.textView_address.text = row.address
+
 
 
         p0.data = row
